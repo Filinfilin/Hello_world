@@ -59,7 +59,7 @@ const About = ({ openPage, open }) => {
               <div className={`${$.button} ${$.red}`}></div>
             </div>
             <div className={$.terminalWindow}>
-              <span className={$.terminalParagraph}>>_</span>
+              <span className={$.terminalParagraph}>{`>_`}</span>
               <span className={$.aboutText} ref={textElement}>
                 {textToShow}
                 <span className={$.blinkingCursor}> |</span>
