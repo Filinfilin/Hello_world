@@ -1,0 +1,132 @@
+.tools {
+  background-color: #87c3cf;
+  transition: width 0.8s, padding 0.8s;
+  width: 100%;
+  align-content: center;
+  display: grid;
+  .title {
+    transform: rotate(0deg);
+    white-space: nowrap;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 0.5fr 7fr 0.5fr;
+    .iconWrapper {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      .iconBox {
+        display: flex;
+        height: 140px;
+        width: 140px;
+        border-radius: 20px;
+        background-color: #f7f4e9;
+        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        transition: width 0.8s;
+        .imageBox {
+          height: fit-content;
+          width: fit-content;
+          .description {
+            text-align: center;
+          }
+        }
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.5s;
+        }
+        &:not(hover) {
+          transition: transform 0.5s;
+        }
+      }
+    }
+  }
+}
+
+.default {
+  padding: none;
+  width: 4rem;
+  transition: width 0.8s, padding 0.8s;
+  background-color: #87c3cf;
+  .title {
+    transform: rotate(90deg);
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .default {
+    padding: none;
+    width: 2rem;
+    transition: width 0.8s, padding 0.8s;
+    background-color: #87c3cf;
+    .title {
+      transform: rotate(90deg);
+      white-space: nowrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tools {
+    background-color: #87c3cf;
+    transition: width 0.8s, padding 0.8s;
+    width: 100%;
+    align-content: center;
+    display: grid;
+    .title {
+      transform: rotate(0deg);
+      white-space: nowrap;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 0.1fr 7fr 0.1fr;
+      position: relative;
+      overflow-y: scroll;
+      padding: 10px 10px 40px 10px;
+      .iconWrapper {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-y: scroll;
+        .iconBox {
+          display: flex;
+          height: 130px;
+          width: 130px;
+          border-radius: 20px;
+          background-color: #f7f4e9;
+          border: 1px solid black;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+          transition: width 0.8s;
+          .imageBox {
+            height: fit-content;
+            width: fit-content;
+            .description {
+              text-align: center;
+            }
+          }
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s;
+          }
+          &:not(hover) {
+            transition: transform 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.arrow {
+  // visibility: hidden;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  height: fit-content;
+  align-self: center;
+  transform: scale(1);
+  margin: 0 auto;
+  position: relative;
+  transition: transform 0.5s;
+  width: fit-content;
+  &>span:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+  }
+  &>span:not(:hover){
+    transform: scale(1);
+    transition: transform 0.2s;
+  }
+}
+.scaleArrow {
+  animation: scalearrow 1s ease-in-out forwards;
+  visibility: visible;
+}
+
+@mixin scale-mixin($name, $scale1, $scale2, $scale3) {
+  @keyframes #{$name} {
+    0% {
+      transform: scale($scale1);
+    }
+    50% {
+      transform: scale($scale2);
+    }
+    100% {
+      transform: scale($scale3);
+    }
+  }
+}
+
+@include scale-mixin(scalearrow, 0.8, 1.5, 1);
+
+
+@media only screen and (max-width: 700px) {
+  .arrow{
+    visibility: hidden;
+  }
+}
