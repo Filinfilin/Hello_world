@@ -7,23 +7,23 @@ const Portfolio = ({ openPage, open }) => {
   const [position, setPosition] = useState("");
   const cards = [
     {
-      name: "Rentaousing",
+      name: "Prodcast platform",
       description:
-        "The standard chunk of Lorem Ipsum used sincethe 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+        "<span>Build with: NodeJS, ExpressJS, PostgreSQL, ReactJS, AntD, Context. <br> Platform has features for upload/download/editing records, paid subscriptions with Stripe, admin panel, personal accounts, google analytics and NGINX load balancing.</span>",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647565000/aixc0egimwrzzwynfiti.gif",
     },
     {
-      name: "Rentalhousing",
+      name: "Realtime chat app",
       description:
-        "The standard chunk of Lorem Ipsum used sincethe 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+        "<span>Project build with: ReactJS, NodeJS, ExpressJS, PostgreSQL, Redux Toolkit, WebSocket. <br> App has opportunity to get/send messages and images in a real time frame.</span>",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647564999/zorabcx7cmlzdl2xoawm.gif",
     },
     {
-      name: "Renhousing",
+      name: "Real Estate",
       description:
-        "The standard chunk of Lorem Ipsum used sincethe 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+        "<span>Technologies: ReactJS, NextJS, Styled Components, Context. <br> The company service presentation page with information about the company and feedback form. Features: sliders and SVG animaton during scroll.</span>",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647564999/ybuuva63hrel0s1zzkki.gif",
     },
@@ -49,7 +49,10 @@ const Portfolio = ({ openPage, open }) => {
     return (
       <div className={$.descriptionBox}>
         <div className={$.projectName}>{name}</div>
-        <div className={$.projectDescription}>{description}</div>
+        <div
+          className={$.projectDescription}
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></div>
       </div>
     );
   };
