@@ -2,14 +2,35 @@ import $ from "./contact.module.scss";
 import gitIcon from "../../public/github.png";
 import linkedIn from "../../public/linkedin.png";
 import Image from "next/image";
-import arrowLeft from "../../public/arrowLeft.png";
 import ButtonNextPrev from "../buttonNextPrev";
+import emailjs from "emailjs-com";
+import { useState } from "react";
 
 function Contact({ openPage, open }) {
+  const [messageSent, setMessageSent] = useState(false);
   const handleSubmit = (e) => {
-    e.stopPropagation();
     e.preventDefault();
-    console.log("submit");
+    e.stopPropagation();
+    emailjs
+      .sendForm(
+        `${process.env.NEXT_PUBLIC_EMAIL_ID}`,
+        `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
+        e.target,
+        `${process.env.NEXT_PUBLIC_USER_ID}`
+      )
+      .then(
+        (result) => {
+          if (result.text == "OK") {
+            setMessageSent(true);
+          } else {
+            console.log(result.text);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -24,13 +45,20 @@ function Contact({ openPage, open }) {
             openPage={openPage}
             goTo={"tools"}
           />
-          <form onSubmit={handleSubmit} className={$.form}>
+          <form
+            onSubmit={handleSubmit}
+            className={$.form}
+            onKeyPress={(e) => {
+              e.key === "Enter" && e.preventDefault();
+            }}
+          >
             <div className={$.nameContainer}>
               <div>
                 <input
                   type="text"
                   className={$.input}
                   placeholder="First name"
+                  name="first_name"
                 />
               </div>
               <div>
@@ -38,11 +66,17 @@ function Contact({ openPage, open }) {
                   type="text"
                   className={$.input}
                   placeholder="Last name"
+                  name="last_name"
                 />
               </div>
             </div>
             <div>
-              <input type="email" className={$.input} placeholder="Email" />
+              <input
+                type="email"
+                className={$.input}
+                placeholder="Email"
+                name="email"
+              />
             </div>
             <div>
               <input
@@ -50,6 +84,7 @@ function Contact({ openPage, open }) {
                 className={$.input}
                 height={180}
                 placeholder="Phone number"
+                name="phone"
               />
             </div>
             <div>
@@ -57,15 +92,20 @@ function Contact({ openPage, open }) {
                 type="text"
                 className={$.input}
                 placeholder="Input your message"
+                name="message"
               />
             </div>
             <div>
-              <button
-                onClick={() => console.log("Submit")}
-                className={$.buttonSubmit}
-              >
-                submit
-              </button>
+              {messageSent ? (
+                <span className={$.folowText}>Thank you for your message!</span>
+              ) : (
+                <button
+                  onClick={() => console.log("Submit")}
+                  className={$.buttonSubmit}
+                >
+                  submit
+                </button>
+              )}
             </div>
             <span className={$.folowText}>Follow me on:</span>
             <div className={$.links}>

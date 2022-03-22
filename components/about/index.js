@@ -27,7 +27,6 @@ const About = ({ openPage, open }) => {
 
   async function showText() {
     let showedText = "";
-    console.log(textElement.current);
     if (textElement.current) {
       for (const text of message) {
         for (const leter of text) {

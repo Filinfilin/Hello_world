@@ -101,11 +101,11 @@ function Tools({ openPage, open }) {
               </div>
             ))}
           </div>
-          {/* <ButtonNextPrev
+          <ButtonNextPrev
             dirrection={"right"}
             openPage={openPage}
             goTo={"contact"}
-          /> */}
+          />
         </div>
       )}
     </div>

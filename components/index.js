@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 
 function MainComponent(props) {
   const [page, setPage] = useState("about");
-  const pages = ["about", "portfolio", "tools", "contact"];
 
   const openPage = (page) => {
     setPage(page);
@@ -18,7 +17,7 @@ function MainComponent(props) {
       <About openPage={openPage} open={page} />
       <Portfolio openPage={openPage} open={page} />
       <Tools openPage={openPage} open={page} />
-      {/* <Contact openPage={openPage} open={page} /> */}
+      <Contact openPage={openPage} open={page} />
     </div>
   );
 }

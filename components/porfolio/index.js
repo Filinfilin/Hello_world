@@ -7,21 +7,21 @@ const Portfolio = ({ openPage, open }) => {
   const [position, setPosition] = useState("");
   const cards = [
     {
-      name: "Rental housing",
+      name: "Rentaousing",
       description:
         "The standard chunk of Lorem Ipsum used sincethe 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647565000/aixc0egimwrzzwynfiti.gif",
     },
     {
-      name: "Rental housing",
+      name: "Rentalhousing",
       description:
         "The standard chunk of Lorem Ipsum used sincethe 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647564999/zorabcx7cmlzdl2xoawm.gif",
     },
     {
-      name: "Rental housing",
+      name: "Renhousing",
       description:
         "The standard chunk of Lorem Ipsum used sincethe 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
       image:
