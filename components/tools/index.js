@@ -58,7 +58,7 @@ const cards = [
   },
   {
     image: responsive,
-    name: "Resposive",
+    name: "Responsive",
     link: "https://en.wikipedia.org/wiki/Responsive_web_design",
   },
   { image: vue, name: "VueJS", link: "https://en.wikipedia.org/wiki/Vue.js" },

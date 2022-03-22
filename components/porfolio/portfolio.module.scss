@@ -102,23 +102,17 @@
       display: none;
       transform: rotate(0deg);
     }
-    // .gradient {
-    //   background: linear-gradient(#f7f4e9 0% 10%, transparent, #f7f4e9 90% 100%);
-    //   position: absolute;
-    //   height: 100%;
-    //   width: 100%;
-    // }
     .sliderWrapper {
       position: relative;
       overflow-y: scroll;
-      padding: 10px;
-      padding: 10px 10px 40px 10px;
+      padding: 30px 0;
       &::-webkit-scrollbar {
         display: none; /* for Chrome, Safari, and Opera */
       }
       .cards {
         display: grid;
         gap: 10px;
+        height: auto;
         .card {
           display: grid;
           grid-template-columns: auto;
