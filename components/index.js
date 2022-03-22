@@ -9,6 +9,7 @@ function MainComponent(props) {
   const [page, setPage] = useState("about");
 
   const openPage = (page) => {
+
     setPage(page);
   };
 

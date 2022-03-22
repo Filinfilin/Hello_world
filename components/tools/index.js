@@ -79,9 +79,9 @@ function Tools({ openPage, open }) {
   return (
     <div className={$[open] || $.default}>
       {open !== "tools" ? (
-        <h1 className={$.title} onClick={() => openPage("tools")}>
+        <div className={$.title} onClick={() => openPage("tools")}>
           Tools
-        </h1>
+        </div>
       ) : (
         <div className={$.wrapper}>
           <ButtonNextPrev

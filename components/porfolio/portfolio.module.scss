@@ -72,8 +72,14 @@
   background-color: #f7f4e9;
   transition: width 0.8s, padding 0.8s;
   .title {
-    transform: rotate(90deg);
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
     white-space: nowrap;
+    width: 100%;
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: center;
+    height: 100%;
   }
 }
 
@@ -83,8 +89,15 @@
     background-color: #f7f4e9;
     transition: width 0.8s, padding 0.8s;
     .title {
-      transform: rotate(90deg);
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
       white-space: nowrap;
+      width: 100%;
+      font-size: xx-large;
+      font-weight: 600;
+      text-align: center;
+      height: 100%;
+      cursor: pointer;
     }
   }
 }

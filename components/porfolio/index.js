@@ -57,9 +57,9 @@ const Portfolio = ({ openPage, open }) => {
   return (
     <div className={$[open] || $.default}>
       {open !== "portfolio" ? (
-        <h1 className={$.title} onClick={() => openPage("portfolio")}>
+        <div className={$.title} onClick={() => openPage("portfolio")}>
           Portfolio
-        </h1>
+        </div>
       ) : (
         <>
           <ButtonNextPrev

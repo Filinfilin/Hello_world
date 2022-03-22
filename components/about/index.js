@@ -45,9 +45,9 @@ const About = ({ openPage, open }) => {
   return (
     <div className={$[open] || $.default}>
       {open !== "about" ? (
-        <h1 className={$.title} onClick={() => openPage("about")}>
+        <div className={$.title} onClick={() => openPage("about")}>
           About Me
-        </h1>
+        </div>
       ) : (
         <>
           <div></div>

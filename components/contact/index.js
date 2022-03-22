@@ -35,9 +35,9 @@ function Contact({ openPage, open }) {
 
   return (
     <div className={$[open] || $.default}>
-      <h1 className={$.title} onClick={() => openPage("contact")}>
+      <div className={$.title} onClick={() => openPage("contact")}>
         Contact
-      </h1>
+      </div>
       {open == "contact" && (
         <div className={$.formWrapper}>
           <ButtonNextPrev
