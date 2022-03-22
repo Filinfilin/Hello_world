@@ -39,16 +39,20 @@ button:active {
 }
 
 input:active {
-  background: rgba(4, 4, 4, 0.1);
   box-shadow: none;
+}
+
+input:focus {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
 }
 
 .input:focus {
   outline: none;
-  background: rgba(4, 4, 4, 0.1);
 }
 
 .input:invalid {
-  border-color: black;
+  border-color: rgb(177, 0, 0);
   box-shadow: none;
 }

@@ -1,5 +1,5 @@
 import $ from "./contact.module.scss";
-import gitIcon from "../../public/github.png";
+import gitIcon from "../../public/github.svg";
 import linkedIn from "../../public/linkedin.png";
 import Image from "next/image";
 import ButtonNextPrev from "../buttonNextPrev";
