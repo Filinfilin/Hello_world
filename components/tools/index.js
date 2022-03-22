@@ -80,7 +80,7 @@ function Tools({ openPage, open }) {
     <div className={$[open] || $.default}>
       {open !== "tools" ? (
         <div className={$.title} onClick={() => openPage("tools")}>
-          Tools
+         My Tools
         </div>
       ) : (
         <div className={$.wrapper}>
