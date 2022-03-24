@@ -20,7 +20,7 @@ const About = ({ openPage, open }) => {
 
   const message = [
     "Hi!",
-    "My name Ruslan and I am self-taught computer enthusiast with an interest in software development.",
+    "My name is Ruslan and I am self-taught computer enthusiast with an interest in software development.",
     "Participating in commercial projects I gained hands-on experience of using MERN, MEVN, PERN stacks for building web applications.",
     "Through working collaboratively with other developers, design and product teams, I have developed strong communication skills, teamwork skills and problem-solving skills.",
     "Please, click on tab if you want to see more...",
