@@ -1,5 +1,4 @@
-import React,{ useRef, useEffect } from "react";
-import { useState } from "react";
+import React from "react";
 import $ from "./buttonNextPrev.module.scss";
 import right from "../../public/right.svg";
 import left from "../../public/left.svg";
