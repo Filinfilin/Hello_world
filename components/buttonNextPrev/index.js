@@ -1,8 +1,8 @@
 import React,{ useRef, useEffect } from "react";
 import { useState } from "react";
 import $ from "./buttonNextPrev.module.scss";
-import right from "../../public/arrowRight.png";
-import left from "../../public/arrowLeft.png";
+import right from "../../public/right.svg";
+import left from "../../public/left.svg";
 import Image from "next/image";
 
 const ButtonNextPrev = ({ openPage, goTo, dirrection, scale }) => {
@@ -17,7 +17,7 @@ const ButtonNextPrev = ({ openPage, goTo, dirrection, scale }) => {
       className={`${$.arrow} ${scale ? $.scaleArrow : ""}`}
       onClick={() => openPage(goTo)}
     >
-      <Image src={icon[dirrection]}/>
+      <Image src={icon[dirrection]} height={40} width={40}/>
     </div>
   );
 };

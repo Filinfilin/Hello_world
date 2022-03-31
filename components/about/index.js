@@ -1,8 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useState } from "react";
 import $ from "./about.module.scss";
-import right from "../../public/arrowRight.png";
-import Image from "next/image";
 import ButtonNextPrev from "../buttonNextPrev";
 
 const About = ({ openPage, open }) => {
