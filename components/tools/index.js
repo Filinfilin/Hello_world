@@ -1,24 +1,26 @@
 import $ from "./tools.module.scss";
-import api from "../../public/api.png";
-import css from "../../public/css.png";
+import api from "../../public/api-1.svg";
+import css from "../../public/css.svg";
 import gitlab from "../../public/gitlab.png";
 import html5 from "../../public/html5.png";
-import mongodb from "../../public/mongodb.png";
-import nextjs from "../../public/nextjs.png";
-import node from "../../public/node.png";
-import psql from "../../public/psql.png";
+import mongodb from "../../public/mongodb.svg";
+import nextjs from "../../public/next.svg";
+import node from "../../public/node.svg";
+import psql from "../../public/postgresql.svg";
 import reactjs from "../../public/reactjs.png";
 import responsive from "../../public/responsive.png";
-import vue from "../../public/vue.png";
-import ts from "../../public/ts.png";
-import git from "../../public/github.png";
+import vue from "../../public/vuejs.svg";
+import ts from "../../public/typescript.svg";
+import tailwind from "../../public/tailwind.svg"
+import git from "../../public/github.svg";
 import sass from "../../public/sass.png";
 import Image from "next/image";
 import ButtonNextPrev from "../buttonNextPrev";
-import js from "../../public/js.png";
+import js from "../../public/js.svg";
 
 const cards = [
   { image: api, name: "API", link: "https://en.wikipedia.org/wiki/API" },
+  { image: tailwind, name: "Tailwind CSS", link: "https://tailwindcss.com/" },
   { image: css, name: "CSS", link: "https://en.wikipedia.org/wiki/CSS" },
   {
     image: gitlab,
@@ -34,7 +36,7 @@ const cards = [
   {
     image: nextjs,
     name: "NextJS",
-    link: "https://en.wikipedia.org/wiki/Next.js",
+    link: "https://nextjs.org/",
   },
   {
     image: js,
@@ -49,29 +51,29 @@ const cards = [
   {
     image: psql,
     name: "PostgreSQL",
-    link: "https://en.wikipedia.org/wiki/PostgreSQL",
+    link: "https://www.postgresql.org/",
   },
   {
     image: reactjs,
     name: "ReactJS",
-    link: "https://en.wikipedia.org/wiki/React_(JavaScript_library)",
+    link: "https://ru.reactjs.org/",
   },
   {
     image: responsive,
     name: "Responsive",
     link: "https://en.wikipedia.org/wiki/Responsive_web_design",
   },
-  { image: vue, name: "VueJS", link: "https://en.wikipedia.org/wiki/Vue.js" },
+  { image: vue, name: "VueJS", link: "https://vuejs.org/" },
   {
     image: ts,
     name: "TypeScript",
-    link: "https://en.wikipedia.org/wiki/TypeScript",
+    link: "https://www.typescriptlang.org/",
   },
-  { image: git, name: "GitHub", link: "https://en.wikipedia.org/wiki/GitHub" },
+  { image: git, name: "GitHub", link: "https://github.com/" },
   {
     image: sass,
     name: "Sass",
-    link: "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)",
+    link: "https://sass-lang.com/",
   },
 ];
 
@@ -94,7 +96,7 @@ function Tools({ openPage, open }) {
               <div className={$.iconBox} key={item.name}>
                 <a href={item.link} target="_blank" rel="noreferrer">
                   <div className={$.imageBox}>
-                    <Image src={item.image} className={$.image} />
+                    <Image src={item.image} className={$.image} height={100} width={100}/>
                     <div className={$.description}>{item.name}</div>
                   </div>
                 </a>
