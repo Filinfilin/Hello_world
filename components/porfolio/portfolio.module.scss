@@ -10,12 +10,6 @@
     display: none;
     transform: rotate(0deg);
   }
-  // .gradient {
-  //   background: linear-gradient(#f7f4e9 0% 10%, transparent, #f7f4e9 90% 100%);
-  //   position: absolute;
-  //   height: 100%;
-  //   width: 100%;
-  // }
   .sliderWrapper {
     position: relative;
     .cards {
@@ -108,7 +102,7 @@
     display: grid;
     transition: width 0.8s, padding 0.8s;
     display: grid;
-    grid-template-columns: 0.1fr 7fr 0.1fr;
+    grid-template-columns: 0.2fr 7fr 0.2fr;
     .title {
       display: none;
       transform: rotate(0deg);

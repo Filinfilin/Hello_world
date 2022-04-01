@@ -42,7 +42,17 @@ input:active {
   box-shadow: none;
 }
 
+textarea:active{
+  box-shadow: none;
+}
+
 input:focus {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+
+textarea:focus {
   -webkit-appearance: none;
   outline: none;
   border: none;

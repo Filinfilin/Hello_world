@@ -1,7 +1,7 @@
-import { useRef, useEffect } from "react";
-import { useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import $ from "./about.module.scss";
 import ButtonNextPrev from "../buttonNextPrev";
+import Links from "../links";
 
 const About = ({ openPage, open }) => {
   const textElement = useRef(null);
@@ -63,6 +63,7 @@ const About = ({ openPage, open }) => {
                 <span className={$.blinkingCursor}> |</span>
               </span>
             </div>
+            <Links />
           </div>
           <ButtonNextPrev
             dirrection={"right"}

@@ -8,12 +8,12 @@ import nextjs from "../../public/next.svg";
 import node from "../../public/node.svg";
 import psql from "../../public/postgresql.svg";
 import reactjs from "../../public/reactjs.png";
-import responsive from "../../public/responsive.png";
+import responsive from "../../public/responsive.svg";
 import vue from "../../public/vuejs.svg";
 import ts from "../../public/typescript.svg";
 import tailwind from "../../public/tailwind.svg"
 import git from "../../public/github.svg";
-import sass from "../../public/sass.png";
+import sass from "../../public/sass.svg";
 import Image from "next/image";
 import ButtonNextPrev from "../buttonNextPrev";
 import js from "../../public/js.svg";

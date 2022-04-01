@@ -1,10 +1,8 @@
 import $ from "./contact.module.scss";
-import gitIcon from "../../public/github.svg";
-import linkedIn from "../../public/linkedin.png";
-import Image from "next/image";
 import ButtonNextPrev from "../buttonNextPrev";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import Links from "../links";
 
 function Contact({ openPage, open }) {
   const [messageSent, setMessageSent] = useState(false);
@@ -88,9 +86,9 @@ function Contact({ openPage, open }) {
               />
             </div>
             <div>
-              <input
-                type="text"
-                className={$.input}
+              <textarea
+                type="message"
+                className={`${$.input} ${$.message}`}
                 placeholder="Input your message"
                 name="message"
               />
@@ -108,26 +106,7 @@ function Contact({ openPage, open }) {
               )}
             </div>
             <span className={$.folowText}>Follow me on:</span>
-            <div className={$.links}>
-              <div className={$.git}>
-                <a
-                  href="https://github.com/Filinfilin/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={gitIcon} height={50} width={50} />
-                </a>
-              </div>
-              <div className={$.linkedIn}>
-                <a
-                  href="https://www.linkedin.com/in/ruslan-f-084573139/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={linkedIn} height={50} width={50} />{" "}
-                </a>
-              </div>
-            </div>
+            <Links />
           </form>
           <div></div>
         </div>
