@@ -6,9 +6,11 @@ import Links from "../links";
 
 function Contact({ openPage, open }) {
   const [messageSent, setMessageSent] = useState(false);
+  const [progress, setProgress] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    setProgress(true);
     emailjs
       .sendForm(
         `${process.env.NEXT_PUBLIC_EMAIL_ID}`,
@@ -29,8 +31,17 @@ function Contact({ openPage, open }) {
         }
       );
     e.target.reset();
+    setProgress();
   };
 
+  const Spiner = () => (
+    <div className={$.ldsring}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
   return (
     <div className={$[open] || $.default}>
       <div className={$.title} onClick={() => openPage("contact")}>
@@ -101,7 +112,7 @@ function Contact({ openPage, open }) {
                   onClick={() => console.log("Submit")}
                   className={$.buttonSubmit}
                 >
-                  submit
+                  {progress ? <Spiner /> : "Submit"}
                 </button>
               )}
             </div>
