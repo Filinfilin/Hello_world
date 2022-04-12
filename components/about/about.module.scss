@@ -7,18 +7,6 @@
   transition: width 0.8s, padding 0.8s;
   display: grid;
   grid-template-columns: 1fr 7fr 1fr;
-  .aboutText {
-    color: #212221;
-    width: 100%;
-    margin-left: 5px;
-    font-size: x-large;
-    font-weight: 600;
-    .blinkingCursor {
-      font-size: x-large;
-      font-weight: 600;
-      animation: blink 1s ease infinite;
-    }
-  }
   .title {
     transform: rotate(0deg);
     white-space: nowrap;
@@ -66,6 +54,13 @@
       height: calc(100% - 3rem);
       border-radius: 0 0 10px 10px;
       .terminalParagraph {
+        font-size: x-large;
+        font-weight: 600;
+      }
+      & > div {
+        color: #212221;
+        width: 100%;
+        margin-left: 5px;
         font-size: x-large;
         font-weight: 600;
       }

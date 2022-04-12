@@ -1,20 +1,15 @@
-import { useRef, useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import $ from "./about.module.scss";
 import ButtonNextPrev from "../buttonNextPrev";
 import Links from "../links";
+import Typewriter from "typewriter-effect";
 
 const About = ({ openPage, open }) => {
-  const textElement = useRef(null);
-  const [textToShow, setTextToShow] = useState("");
   const [scale, setScale] = useState(false);
 
   useEffect(() => {
-    if (open == "about") {
-      setTimeout(showText, 1000);
-    } else {
-      setTextToShow("");
-    }
-  }, [open]);
+    setTimeout(() => setScale(true), 5000);
+  }, []);
 
   const message = [
     "Hi!",
@@ -23,23 +18,6 @@ const About = ({ openPage, open }) => {
     "Through working collaboratively with other developers, design and product teams, I have developed strong communication skills, teamwork skills and problem-solving skills.",
     "Please, click on tab if you want to see more...",
   ];
-
-  async function showText() {
-    let showedText = "";
-    if (textElement.current) {
-      for (const text of message) {
-        for (const leter of text) {
-          showedText += leter;
-          setTextToShow(showedText);
-          await new Promise((res) => setTimeout(res, 50));
-        }
-        await new Promise((res) => setTimeout(res, 1500));
-        showedText = "";
-        setTextToShow(showedText);
-      }
-      setScale(true);
-    }
-  }
 
   return (
     <div className={$[open] || $.default}>
@@ -58,10 +36,18 @@ const About = ({ openPage, open }) => {
             </div>
             <div className={$.terminalWindow}>
               <span className={$.terminalParagraph}>{`>_`}</span>
-              <span className={$.aboutText} ref={textElement}>
-                {textToShow}
+              <Typewriter
+                className={$.aboutText}
+                options={{
+                  strings: message,
+                  autoStart: true,
+                  loop: true,
+                  delay: 35,
+                  deleteSpeed: 20,
+                }}
+              >
                 <span className={$.blinkingCursor}> |</span>
-              </span>
+              </Typewriter>
             </div>
             <Links />
           </div>

@@ -31,7 +31,7 @@ function Contact({ openPage, open }) {
         }
       );
     e.target.reset();
-    setProgress();
+    setProgress(false);
   };
 
   const Spiner = () => (
