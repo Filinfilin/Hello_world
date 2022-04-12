@@ -22,6 +22,7 @@ function Contact({ openPage, open }) {
         (result) => {
           if (result.text == "OK") {
             setMessageSent(true);
+            setProgress(false);
           } else {
             console.log(result.text);
           }
@@ -31,7 +32,6 @@ function Contact({ openPage, open }) {
         }
       );
     e.target.reset();
-    setProgress(false);
   };
 
   const Spiner = () => (
@@ -89,7 +89,7 @@ function Contact({ openPage, open }) {
             </div>
             <div>
               <input
-                type="text"
+                type="number"
                 className={$.input}
                 height={180}
                 placeholder="Phone number"
