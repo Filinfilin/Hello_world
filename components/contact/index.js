@@ -89,7 +89,7 @@ function Contact({ openPage, open }) {
             </div>
             <div>
               <input
-                type="number"
+                type="text"
                 className={$.input}
                 height={180}
                 placeholder="Phone number"
