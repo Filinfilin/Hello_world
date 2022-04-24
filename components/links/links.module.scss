@@ -1,51 +1,45 @@
-
 .links {
-    margin-top: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  .link {
     display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: #f7f4e9;
+    border: 3px solid black;
     justify-content: center;
-    .git {
-      display: flex;
-      height: 100px;
-      width: 100px;
-      background-color: #f7f4e9;
-      border: 1px solid black;
-      justify-content: center;
-      align-items: center;
-      margin: 5px;
-      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-      &:hover {
-        transform: scale(1.1);
-        transition: transform 0.5s;
-      }
-      &:not(:hover) {
-        transition: transform 0.5s;
-      }
+    align-items: center;
+    margin: 10px;
+    box-shadow: -5px 5px #96a9c5;
+    border-radius: 20px;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s;
     }
-    .linkedIn {
-      display: flex;
-      height: 100px;
-      width: 100px;
-      background-color: #f7f4e9;
-      border: 1px solid black;
-      justify-content: center;
-      align-items: center;
-      margin: 5px;
-      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-      &:hover {
-        transform: scale(1.1);
-        transition: transform 0.5s;
-      }
-      &:not(:hover) {
-        transition: transform 0.5s;
-      }
+    &:not(:hover) {
+      transition: transform 0.5s;
     }
   }
+  .text {
+    font-size: x-large;
+    font-weight: 600;
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    color: #f7f4e9;
+  }
+}
 
-  @media only screen and (max-width: 700px) {
-    .links{
-      margin-top: 1rem;
+@media only screen and (max-width: 700px) {
+  .links {
+    margin-top: 1rem;
+    .link{
+      border: 2px solid black;
     }
-    
+    .text {
+      font-size: large;
+    }
   }
+}

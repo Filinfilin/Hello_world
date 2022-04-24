@@ -116,7 +116,6 @@ function Contact({ openPage, open }) {
                 </button>
               )}
             </div>
-            <span className={$.folowText}>Follow me on:</span>
             <Links />
           </form>
           <div></div>

@@ -7,7 +7,8 @@ import $ from "./links.module.scss";
 export default function Links() {
   return (
     <div className={$.links}>
-      <div className={$.git}>
+      <div className={$.text}>Find me on:</div>
+      <div className={$.link}>
         <a
           href="https://github.com/Filinfilin/"
           target="_blank"
@@ -16,7 +17,7 @@ export default function Links() {
           <Image src={gitIcon} height={57} width={57} />
         </a>
       </div>
-      <div className={$.linkedIn}>
+      <div className={$.link}>
         <a
           href="https://www.linkedin.com/in/ruslan-f-084573139/"
           target="_blank"
