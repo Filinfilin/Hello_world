@@ -3,7 +3,7 @@
   align-content: center;
   display: grid;
   background-color: #eba63f;
-  transition: width 0.8s, padding 0.8s;
+  transition: width 0.5s, padding 0.5s;
   .title {
     transform: rotate(0deg);
     white-space: nowrap;
@@ -82,7 +82,7 @@
 .default {
   background-color: #eba63f;
   width: 4rem;
-  transition: width 0.8s, padding 0.8s;
+  transition: width 0.5s, padding 0.5s;
   .title {
     writing-mode: vertical-rl;
     text-orientation: sideways;
@@ -100,7 +100,7 @@
   .default {
     background-color: #eba63f;
     width: 2rem;
-    transition: width 0.8s, padding 0.8s;
+    transition: width 0.5s, padding 0.5s;
     .title {
       writing-mode: vertical-rl;
       text-orientation: sideways;

@@ -1,35 +1,51 @@
 import $ from "./portfolio.module.scss";
 import Image from "next/image";
-import { useState } from "react";
 import ButtonNextPrev from "../buttonNextPrev";
 
 const Portfolio = ({ openPage, open }) => {
-  const [position, setPosition] = useState("");
   const cards = [
     {
+      style: [$.one],
       name: "Prodcast platform",
+      stack: [
+        "NodeJS",
+        "ExpressJS",
+        "PostgreSQL",
+        "ReactJS",
+        "AntD",
+        "Context",
+      ],
       description:
-        "<span>Build with: NodeJS, ExpressJS, PostgreSQL, ReactJS, AntD, Context. <br> Platform has features for upload/download/editing records, paid subscriptions with Stripe, admin panel, personal accounts, google analytics and NGINX load balancing.</span>",
+        "<span>Platform has features for upload/download/editing records, paid subscriptions with Stripe, admin panel, personal accounts, google analytics and NGINX load balancing.</span>",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647565000/aixc0egimwrzzwynfiti.gif",
     },
     {
+      style: [$.two],
       name: "Realtime chat app",
+      stack: [
+        "ReactJS",
+        "NodeJS",
+        "ExpressJS",
+        "PostgreSQL",
+        "Redux Tk",
+        "WebSocket",
+      ],
       description:
-        "<span>Project build with: ReactJS, NodeJS, ExpressJS, PostgreSQL, Redux Toolkit, WebSocket. <br> App has opportunity to get/send messages and images in a real time frame.</span>",
+        "<span>App has opportunity to get/send messages and images in a real time frame.</span>",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647564999/zorabcx7cmlzdl2xoawm.gif",
     },
     {
+      style: [$.three],
       name: "Real Estate",
+      stack: ["ReactJS", "NextJS", "Styled Components", "Context"],
       description:
-        "<span>Technologies: ReactJS, NextJS, Styled Components, Context. <br> The company service presentation page with information about the company and feedback form. Features: sliders and SVG animaton during scroll.</span>",
+        "<span> The company service presentation page with information about the company and feedback form. Features: sliders and SVG animaton during scroll.</span>",
       image:
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647564999/ybuuva63hrel0s1zzkki.gif",
     },
   ];
-
-  const slider = () => {};
 
   const Preview = (src) => {
     return (
@@ -45,10 +61,17 @@ const Portfolio = ({ openPage, open }) => {
     );
   };
 
-  const Description = ({ name, description }) => {
+  const Description = ({ name, stack, description }) => {
     return (
       <div className={$.descriptionBox}>
         <div className={$.projectName}>{name}</div>
+        <div className={$.stackWrapper}>
+          {stack?.map((item, index) => (
+            <div className={$.stack} key={index + "stack"}>
+              {item}
+            </div>
+          ))}
+        </div>
         <div
           className={$.projectDescription}
           dangerouslySetInnerHTML={{ __html: description }}
@@ -61,7 +84,7 @@ const Portfolio = ({ openPage, open }) => {
     <div className={$[open] || $.default}>
       {open !== "portfolio" ? (
         <div className={$.title} onClick={() => openPage("portfolio")}>
-        Portfolio
+          Portfolio
         </div>
       ) : (
         <>
@@ -74,15 +97,17 @@ const Portfolio = ({ openPage, open }) => {
           <div className={$.sliderWrapper}>
             <div className={$.gradient}></div>
             <div className={$.cards}>
+              <div className={$.activeTitle}>Portfolio</div>
               {open == "portfolio" &&
                 cards.map((item, index) => (
-                  <div className={`${$.card} ${$.active}`} key={item.name}>
+                  <div className={`${$.card} ${item.style}`} key={item.name}>
                     {index % 2 != 0 ? (
                       <>
                         <Preview src={item.image} />
                         <Description
                           name={item.name}
                           description={item.description}
+                          stack={item.stack}
                         />
                       </>
                     ) : (
@@ -90,6 +115,7 @@ const Portfolio = ({ openPage, open }) => {
                         <Description
                           name={item.name}
                           description={item.description}
+                          stack={item.stack}
                         />
                         <Preview src={item.image} />
                       </>

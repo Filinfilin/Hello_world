@@ -3,19 +3,43 @@
   background-color: #f7f4e9;
   align-content: center;
   display: grid;
-  transition: width 0.8s, padding 0.8s;
+  transition: width 0.5s, padding 0.5s;
   display: grid;
-  grid-template-columns: 0.5fr 7fr 0.5fr;
+  grid-template-columns: 0.5fr 5fr 0.5fr;
   .title {
     display: none;
     transform: rotate(0deg);
   }
+  .activeTitle {
+    font-weight: 600;
+    font-size: xx-large;
+  }
   .sliderWrapper {
+    padding: 0 2rem 0 2rem;
     position: relative;
+    margin: auto;
     .cards {
       display: grid;
-      gap: 10px;
-      height: 700px;
+      gap: 20px;
+      max-width: 750px;
+      .one {
+        box-shadow: -10px 10px 0px #88c3cf;
+        .stack{
+          background: #CFF3F3;
+        }
+      }
+      .two {
+        box-shadow: -10px 10px 0px #CF8899;
+        .stack{
+          background: #FFE0DE;
+        }
+      }
+      .three {
+        box-shadow: -10px 10px 0px #FCD68C;
+        .stack{
+          background: #FFE7CC;
+        }
+      }
       .card {
         display: grid;
         grid-template-columns: 4fr 4fr;
@@ -25,23 +49,36 @@
         border-radius: 20px;
         padding: 10px;
         max-height: 300px;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
         margin: 0 auto;
-        max-width: 810px;
+        border: 3px solid black;
+        .stackWrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          margin-bottom: 15px;
+          .stack {
+            white-space: nowrap;
+            padding: 6px 12px;
+            border-radius: 8px;
+            width: fit-content;
+          }
+        }
         .descriptionBox {
           font-weight: 500;
           .projectName {
             font-size: x-large;
             font-weight: 600;
             text-align: center;
+            margin-bottom: 15px;
           }
           .projectDescription {
             font-size: large;
             padding: 5px;
+            margin-bottom: 15px;
           }
         }
         .image {
-          border: 1px solid black;
+          border: 3px solid black;
           position: relative;
           border-radius: 20px;
           object-fit: contain;
@@ -61,7 +98,7 @@
 .default {
   width: 4rem;
   background-color: #f7f4e9;
-  transition: width 0.8s, padding 0.8s;
+  transition: width 0.5s, padding 0.5s;
   .title {
     writing-mode: vertical-rl;
     text-orientation: sideways;
@@ -79,7 +116,7 @@
   .default {
     width: 2rem;
     background-color: #f7f4e9;
-    transition: width 0.8s, padding 0.8s;
+    transition: width 0.5s, padding 0.5s;
     .title {
       writing-mode: vertical-rl;
       text-orientation: sideways;
@@ -100,7 +137,7 @@
     background-color: #f7f4e9;
     align-content: center;
     display: grid;
-    transition: width 0.8s, padding 0.8s;
+    transition: width 0.5s, padding 0.5s;
     display: grid;
     grid-template-columns: 0.2fr 7fr 0.2fr;
     .title {
@@ -126,7 +163,7 @@
           background-color: #ffffff;
           border-radius: 20px;
           padding: 10px;
-          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: -10px 10px 0px #88c3cf;
           .descriptionBox {
             font-weight: 200;
             .projectName {

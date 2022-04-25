@@ -4,7 +4,7 @@
   background-color: #212221;
   align-content: center;
   display: grid;
-  transition: width 0.8s, padding 0.8s;
+  transition: width 0.5s, padding 0.5s;
   display: grid;
   grid-template-columns: 1fr 7fr 1fr;
   .terminal {
@@ -24,7 +24,7 @@
       height: 100%;
       border: 5px solid black;
       border-radius: 15px;
-      box-shadow: -5px 5px #f7f4e9;
+      box-shadow: -10px 10px #f7f4e9;
     }
     .headerPanel {
       width: 100%;
@@ -80,7 +80,7 @@
   width: 4rem;
   padding: none;
   background-color: #212221;
-  transition: width 0.8s, padding 0.8s;
+  transition: width 0.5s, padding 0.5s;
   .title {
     color: #f7f4e9;
     writing-mode: vertical-rl;
@@ -100,7 +100,7 @@
     width: 2rem;
     padding: none;
     background-color: wheat;
-    transition: width 0.8s, padding 0.8s;
+    transition: width 0.5s, padding 0.5s;
     .title {
       color: #212221;
       writing-mode: vertical-rl;
