@@ -10,10 +10,9 @@
   .terminal {
     width: 100%;
     border-radius: 15px;
-    height: 30rem;
-    margin-top: -15rem;
+    height: fit-content;
     .greeting {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       display: flex;
       justify-content: left;
       font-size: 64px;
@@ -25,6 +24,7 @@
       border: 5px solid black;
       border-radius: 15px;
       box-shadow: -10px 10px #f7f4e9;
+      height: 20rem;
     }
     .headerPanel {
       width: 100%;
@@ -116,11 +116,12 @@
   .about {
     padding: 0;
     .terminal {
-      height: 40rem;
-      margin-top: -11rem;
+      height: 45rem;
+      .wrapper{
+        height: 30rem;
+      }
       .greeting {
-        font-size: x-large;
-        margin-bottom: 1rem;
+        font-size: xx-large;
       }
       .terminalWindow {
         margin-bottom: 2.5rem;

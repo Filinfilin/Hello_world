@@ -1,10 +1,8 @@
 .portfolio {
   width: 100%;
   background-color: #f7f4e9;
-  align-content: center;
   display: grid;
   transition: width 0.5s, padding 0.5s;
-  display: grid;
   grid-template-columns: 0.5fr 5fr 0.5fr;
   .title {
     display: none;
@@ -15,13 +13,12 @@
     font-size: xx-large;
   }
   .sliderWrapper {
-    padding: 0 2rem 0 2rem;
-    position: relative;
+    padding: 0 2rem;
     margin: auto;
     .cards {
       display: grid;
       gap: 20px;
-      max-width: 750px;
+      max-width: 880px;
       .one {
         box-shadow: -10px 10px 0px #88c3cf;
         .stack{
@@ -43,12 +40,10 @@
       .card {
         display: grid;
         grid-template-columns: 4fr 4fr;
-        max-height: fit-content;
         gap: 30px;
         background-color: #ffffff;
         border-radius: 20px;
         padding: 10px;
-        max-height: 300px;
         margin: 0 auto;
         border: 3px solid black;
         .stackWrapper {
@@ -74,7 +69,6 @@
           .projectDescription {
             font-size: large;
             padding: 5px;
-            margin-bottom: 15px;
           }
         }
         .image {
@@ -133,28 +127,23 @@
 
 @media only screen and (max-width: 700px) {
   .portfolio {
+    overflow-y: scroll;
     width: 100%;
     background-color: #f7f4e9;
     align-content: center;
-    display: grid;
+    display: flex;
     transition: width 0.5s, padding 0.5s;
-    display: grid;
-    grid-template-columns: 0.2fr 7fr 0.2fr;
     .title {
       display: none;
       transform: rotate(0deg);
     }
     .sliderWrapper {
       position: relative;
-      overflow-y: scroll;
-      padding: 30px 0;
+      padding: 30px 10px;
       &::-webkit-scrollbar {
         display: none; /* for Chrome, Safari, and Opera */
       }
       .cards {
-        display: grid;
-        gap: 10px;
-        height: auto;
         .card {
           display: grid;
           grid-template-columns: auto;
@@ -167,12 +156,16 @@
           .descriptionBox {
             font-weight: 200;
             .projectName {
-              font-size: large;
-              font-weight: 400;
+              font-size: x-large;
+              font-weight: 500;
               text-align: center;
+            }
+            .stack{
+              font-weight: 400;
             }
             .projectDescription {
               font-size: large;
+              font-weight: 400;
               padding: 5px;
             }
           }
