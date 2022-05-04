@@ -106,7 +106,7 @@ function Contact({ openPage, open }) {
             </div>
             <div>
               {messageSent ? (
-                <span className={$.folowText}>Thank you for your message!</span>
+                <div className={$.folowText}>Thank you for your message!</div>
               ) : (
                 <button
                   onClick={() => console.log("Submit")}
