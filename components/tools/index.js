@@ -23,7 +23,7 @@ const cards = [
   { image: api, name: "API", link: "https://en.wikipedia.org/wiki/API" },
   { image: tailwind, name: "Tailwind CSS", link: "https://tailwindcss.com/" },
   { image: css, name: "CSS", link: "https://en.wikipedia.org/wiki/CSS" },
-  { image: angular, name: "Angular", link: "https://en.wikipedia.org/wiki/CSS" },
+  { image: angular, name: "Angular", link: "https://en.wikipedia.org/wiki/Angular_(web_framework)" },
   {
     image: gitlab,
     name: "GitLab",
