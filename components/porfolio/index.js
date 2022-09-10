@@ -21,6 +21,15 @@ const Portfolio = ({ openPage, open }) => {
         "https://res.cloudinary.com/dxsalxqoo/image/upload/v1647565000/aixc0egimwrzzwynfiti.gif",
     },
     {
+      style: [$.four],
+      name: "Online Furniture Shop",
+      stack: ["Angular13", "NodeJS", "ExpressJS", "AWS", "PostgreSQL"],
+      description:
+        "<span> Furniture shop built inside docker container, deployed on Amazon C2 with preconfigured CI/CD automation pipelines. features: Auth and Stripe payment system.  </span>",
+      image:
+        "https://res.cloudinary.com/dxsalxqoo/image/upload/v1662768015/fkzz4wt3bqyysviffrkl.png",
+    },
+    {
       style: [$.two],
       name: "Realtime chat app",
       stack: [

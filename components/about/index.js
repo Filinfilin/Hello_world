@@ -29,7 +29,7 @@ const About = ({ openPage, open }) => {
           <div></div>
           <div className={$.terminal}>
             <div className={$.greeting}>
-              <h>Hi, 👋</h>
+              <div>Hi, 👋</div>
             </div>
             <div className={$.wrapper}>
               <div className={$.headerPanel}>

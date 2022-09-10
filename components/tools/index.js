@@ -9,6 +9,7 @@ import node from "../../public/node.svg";
 import psql from "../../public/postgresql.svg";
 import reactjs from "../../public/reactjs.png";
 import responsive from "../../public/responsive.svg";
+import angular from "../../public/angular.svg"
 import vue from "../../public/vuejs.svg";
 import ts from "../../public/typescript.svg";
 import tailwind from "../../public/tailwind.svg"
@@ -22,6 +23,7 @@ const cards = [
   { image: api, name: "API", link: "https://en.wikipedia.org/wiki/API" },
   { image: tailwind, name: "Tailwind CSS", link: "https://tailwindcss.com/" },
   { image: css, name: "CSS", link: "https://en.wikipedia.org/wiki/CSS" },
+  { image: angular, name: "Angular", link: "https://en.wikipedia.org/wiki/CSS" },
   {
     image: gitlab,
     name: "GitLab",

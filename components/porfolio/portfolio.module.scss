@@ -13,28 +13,42 @@
     font-size: xx-large;
   }
   .sliderWrapper {
+    overflow-y: scroll;
+    border-bottom: 3px solid black;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    max-height: 80%;
     padding: 0 2rem;
     margin: auto;
     .cards {
+      padding-bottom: 10px;
       display: grid;
       gap: 20px;
       max-width: 880px;
       .one {
         box-shadow: -10px 10px 0px #88c3cf;
-        .stack{
-          background: #CFF3F3;
+        .stack {
+          background: #cff3f3;
         }
       }
       .two {
-        box-shadow: -10px 10px 0px #CF8899;
-        .stack{
-          background: #FFE0DE;
+        box-shadow: -10px 10px 0px #cf8899;
+        .stack {
+          background: #ffe0de;
         }
       }
       .three {
-        box-shadow: -10px 10px 0px #FCD68C;
-        .stack{
-          background: #FFE7CC;
+        box-shadow: -10px 10px 0px #fcd68c;
+        .stack {
+          background: #ffe7cc;
+        }
+      }
+      .four {
+        box-shadow: -10px 10px 0px #575857;
+        .stack {
+          background: #8d8f8d;
+          color: white;
         }
       }
       .card {
@@ -44,7 +58,7 @@
         background-color: #ffffff;
         border-radius: 20px;
         padding: 10px;
-        margin: 0 auto;
+        margin: 10px auto;
         border: 3px solid black;
         .stackWrapper {
           display: flex;
@@ -75,13 +89,14 @@
           border: 3px solid black;
           position: relative;
           border-radius: 20px;
-          object-fit: contain;
-          border-radius: 20px;
+          overflow: auto;
+          z-index: 1;
           .preview {
             position: relative;
             object-fit: fill;
-            border-radius: 20px;
+            // border-radius: 20px;
             padding: 20px;
+            overflow: hidden;
           }
         }
       }
@@ -160,7 +175,7 @@
               font-weight: 500;
               text-align: center;
             }
-            .stack{
+            .stack {
               font-weight: 400;
             }
             .projectDescription {
